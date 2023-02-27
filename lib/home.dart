@@ -61,10 +61,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     }
                   });
                 }, child: Text(" ❌False "),),
+                SizedBox(height: 20),
                 Visibility(visible: i>=4?true:false,
                   child: TextButton(onPressed:() {
                     setState(() {
-                      for(i=0; i<qaList.length; i++)
+                      for(i=0; i<qaList.length-1; i++)
                       {
                         if(ansList[i]==userList[i])
                         {
@@ -74,7 +75,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     },);
                   },child: Text("Result",style: TextStyle(fontWeight: FontWeight.bold),),),
                 ),
-                Text("$count"),
+                SizedBox(height: 20),
+                Text("$count",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 40,color: Colors.brown.shade400),),
               ],
             ),
           ],
