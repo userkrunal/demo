@@ -45,6 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     if(i<qaList.length)
                       {
                         userList.add(true);
+                        print("$userList");
                       }
                   });
                 }, child: Text(" ✔True  ",)),
@@ -58,6 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     if(i<qaList.length)
                     {
                       userList.add(false);
+                      print("$userList");
                     }
                   });
                 }, child: Text(" ❌False "),),
@@ -65,7 +67,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Visibility(visible: i>=4?true:false,
                   child: TextButton(onPressed:() {
                     setState(() {
-                      for(i=0; i<qaList.length-1; i++)
+                      for(i=0; i<6; i++)
                       {
                         if(ansList[i]==userList[i])
                         {
